@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reward</title>
+</head>
+<body>
+  <script>
+    const code = localStorage.getItem("trivia_token");
+    if (!code) {
+      location.href = "index.html";
+    }
+  </script>
+  <h1>🎉 Congrats!</h1>
+  <p>Your code: <b id="code"></b></p>
+
+  <script>
+    document.getElementById("code").innerText = localStorage.getItem("trivia_token");
+    localStorage.removeItem("trivia_token");
+  </script>
+</body>
+</html>
